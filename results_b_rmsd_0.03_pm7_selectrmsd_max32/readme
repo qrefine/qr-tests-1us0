@@ -1,0 +1,4 @@
+The result is from the latest version code with initial restraints weight calculation and choosing the best structure.
+The max_bond_rmsd=0.03
+The starting value of initial restraints weight calculation is 32. 
+We look for the best and lowest restraints weight value by decreasing the starting value.
