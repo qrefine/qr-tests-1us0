@@ -43,7 +43,7 @@ def dist(site1, site2):
 
 def run(file_name="a87_99_h.pdb"):
   #
-  prefix="results_b_rmsd_0.03_pm7_selectrmsd"
+  prefix="results_b_rmsd_0.03_terachem_selectrmsd_max32"
   sub_path = "%s/opt_cctbx/"%prefix
   rmsd_dirs = ["0.3/","0.6/","0.9/","1.2/","1.5/"]
   file_names = ["0.pdb","1.pdb","2.pdb","3.pdb","4.pdb","5.pdb","6.pdb","7.pdb",
