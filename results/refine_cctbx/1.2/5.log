@@ -5,64 +5,64 @@
                    ----------Processing X-ray data----------                   
 
 F-obs:
-  /Users/minzheng/rerun/helix/data.mtz:F(ake)obs
+  /home/m_zhen01/QR/1us0/data.mtz:FMODEL
 Miller array info: None
 Observation type: xray.amplitude
-Type of data: double, size=160
+Type of data: double, size=211
 Type of sigmas: None
-Number of Miller indices: 160
+Number of Miller indices: 211
 Anomalous flag: False
 Unit cell: (16.291, 18.744, 30.715, 90, 90, 90)
 Space group: P 1 (No. 1)
 Systematic absences: 0
 Centric reflections: 0
-Resolution range: 3.97988 3.50665
+Resolution range: 5.93968 4
 Completeness in resolution range: 1
-Completeness with d_max=infinity: 0.345572
+Completeness with d_max=infinity: 0.69637
 
-Number of F-obs in resolution range:                   160
+Number of F-obs in resolution range:                   211
 Number of F-obs<0 (these reflections will be rejected): 0
 Number of F-obs=0 (these reflections will be used in refinement): 0
-Refinement resolution range: d_max =   3.9799
-                             d_min =   3.5066
+Refinement resolution range: d_max =   5.9397
+                             d_min =   4.0000
 
 R-free flags:
-  /Users/minzheng/rerun/helix/data.mtz:R-free-flags
-Miller array info: /Users/minzheng/rerun/helix/data.mtz:R-free-flags
+  /home/m_zhen01/QR/1us0/data.mtz:R-free-flags
+Miller array info: /home/m_zhen01/QR/1us0/data.mtz:R-free-flags
 Observation type: None
-Type of data: int, size=160
+Type of data: int, size=211
 Type of sigmas: None
-Number of Miller indices: 160
+Number of Miller indices: 211
 Anomalous flag: False
 Unit cell: (16.291, 18.744, 30.715, 90, 90, 90)
 Space group: P 1 (No. 1)
 Systematic absences: 0
 Centric reflections: 0
-Resolution range: 3.97988 3.50665
+Resolution range: 5.93968 4
 Completeness in resolution range: 1
-Completeness with d_max=infinity: 0.345572
+Completeness with d_max=infinity: 0.69637
 Wavelength: 1.0000
 
 Test (R-free flags) flag value: 1
 
 Number of work/free reflections by resolution:
-                                   work free  %free
-  bin  1: 3.9799 - 3.9204 [28/28 ]   28    0   0.0%
-  bin  2: 3.9204 - 3.8644 [ 4/4  ]    4    0   0.0%
-  bin  3: 3.8644 - 3.8114 [19/19 ]   13    6  31.6%
-  bin  4: 3.8114 - 3.7612 [16/16 ]   16    0   0.0%
-  bin  5: 3.7612 - 3.7135 [15/15 ]   13    2  13.3%
-  bin  6: 3.7135 - 3.6682 [ 8/8  ]    8    0   0.0%
-  bin  7: 3.6682 - 3.6250 [24/24 ]   24    0   0.0%
-  bin  8: 3.6250 - 3.5838 [12/12 ]   10    2  16.7%
-  bin  9: 3.5838 - 3.5444 [16/16 ]   16    0   0.0%
-  bin 10: 3.5444 - 3.5066 [18/18 ]   14    4  22.2%
-                           overall  146   14   8.8%
+                                  work free  %free
+  bin  1: 5.9397 - 5.5475 [24/24]   22    2   8.3%
+  bin  2: 5.5475 - 5.2419 [21/21]   19    2   9.5%
+  bin  3: 5.2419 - 4.9942 [15/15]   13    2  13.3%
+  bin  4: 4.9942 - 4.7875 [28/28]   25    3  10.7%
+  bin  5: 4.7875 - 4.6113 [29/29]   26    3  10.3%
+  bin  6: 4.6113 - 4.4584 [14/14]   13    1   7.1%
+  bin  7: 4.4584 - 4.3240 [19/19]   17    2  10.5%
+  bin  8: 4.3240 - 4.2045 [26/26]   23    3  11.5%
+  bin  9: 4.2045 - 4.0971 [14/14]   13    1   7.1%
+  bin 10: 4.0971 - 4.0000 [21/21]   19    2   9.5%
+                          overall  190   21  10.0%
 
                    ----------Processing PDB file(s)----------                  
 
   Monomer Library directory:
-    "/Users/Shared/bin/phenix/phenix-1.10.1-2155/modules/chem_data/mon_lib"
+    "/home/m/m_zhen01/phenix-1.10.1-2155/modules/chem_data/mon_lib"
   Total number of atoms: 94
   Number of models: 1
   Model: ""
@@ -75,7 +75,7 @@ Number of work/free reflections by resolution:
           Classifications: {'peptide': 13}
           Modifications used: {'NH2NOTPRO': 1, 'COOH': 1}
           Link IDs: {'TRANS': 12}
-  Time building chain proxies: 0.03, per 1000 atoms: 0.32
+  Time building chain proxies: 0.04, per 1000 atoms: 0.43
   Number of scatterers: 94
   At special positions: 0
   Unit cell: (16.291, 18.744, 30.715, 90, 90, 90)
@@ -102,7 +102,7 @@ Number of work/free reflections by resolution:
       
   Number of custom bonds: simple=0, symmetry=0
   Time building additional restraints: 0.02
-  Conformation dependent library (CDL) restraints added in 4.4 milliseconds
+  Conformation dependent library (CDL) restraints added in 5.0 milliseconds
   
   Adding C-beta torsion restraints...
   Number of C-beta restraints generated:  0
@@ -276,24 +276,17 @@ Unit cell: (16.291, 18.744, 30.715, 90, 90, 90)
 Space group: P 1 (No. 1)
 
 End of input processing
-r_work=0.4569 r_free=0.3338
+r_work=0.4341 r_free=0.2985
 params.data_weight: None
 params.restraints: cctbx
+residue charges [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1.0]
 rmsd(b), start:  0.0156
-mc:   0 R: 0.1369 rmsd(b):  0.0470 restraint_scale:  2.0 min_steps: 51
-mc:   1 R: 0.1017 rmsd(b):  0.0527 restraint_scale:  4.0 min_steps: 31
-mc:   2 R: 0.1081 rmsd(b):  0.0394 restraint_scale:  8.0 min_steps: 14
-mc:   3 R: 0.1261 rmsd(b):  0.0258 restraint_scale:  8.0 min_steps: 22
-mc:   4 R: 0.1275 rmsd(b):  0.0254 restraint_scale:  8.0 min_steps: 7
-mc:   5 R: 0.1370 rmsd(b):  0.0207 restraint_scale:  8.0 min_steps: 32
-mc:   6 R: 0.1442 rmsd(b):  0.0170 restraint_scale:  8.0 min_steps: 13
-mc:   7 R: 0.1263 rmsd(b):  0.0246 restraint_scale:  8.0 min_steps: 19
-mc:   8 R: 0.1223 rmsd(b):  0.0255 restraint_scale:  8.0 min_steps: 12
-mc:   9 R: 0.1388 rmsd(b):  0.0172 restraint_scale:  8.0 min_steps: 19
-mc:  10 R: 0.1421 rmsd(b):  0.0161 restraint_scale:  8.0 min_steps: 6
-mc:  11 R: 0.1378 rmsd(b):  0.0193 restraint_scale:  8.0 min_steps: 4
-mc:  12 R: 0.1332 rmsd(b):  0.0206 restraint_scale:  8.0 min_steps: 15
-mc:  13 R: 0.1325 rmsd(b):  0.0212 restraint_scale:  8.0 min_steps: 6
-Convergence reached, stop now.
+initial_restraints_weight_scale 1.0
+  Convergence reached at i: 4
+mc:   0 Rw: 0.0355 Rf: 0.0821 rmsd(b):  0.0327 restraint_scale:  2.0 min_steps: 8
+  Convergence reached at i: 5
+mc:   1 Rw: 0.0369 Rf: 0.0832 rmsd(b):  0.0210 restraint_scale:  2.0 min_steps: 6
+ Convergence at macro_cycle: 1
+Best r_work: 0.0369 r_free: 0.0832
 see the result structure:  ./results/refine_cctbx/./1.2/5.pdb
-Time: 4.4064
+Time: 3.5069
