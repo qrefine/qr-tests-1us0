@@ -64,8 +64,8 @@ def run(file_name="a87_99_h.pdb"):
             h_bonds_i_seqs.append([a_i.i_seq, a_j.i_seq])
   print "Total number of H bonds in one file:", len(h_bonds_i_seqs)
   # loop over refinements
-  for sub_path in [#"opt_cctbx/",
-                   #"opt_qm/",
+  for sub_path in ["opt_cctbx/",
+                   "opt_qm/",
                    "refine_cctbx/",
                    "refine_qm/"
                   ]:
