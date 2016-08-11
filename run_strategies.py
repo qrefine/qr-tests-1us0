@@ -40,7 +40,6 @@ def run():
         #Loop over data files
         data_files = os.listdir(mtz_prefix)
         for data_file in data_files:
-	   
             data_file_start_time = time.time()
             if(data_file.endswith(".mtz")):
                 data_file_name = "."#data_file[:-4] # drop the .mtz extension
