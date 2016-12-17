@@ -6,7 +6,7 @@ from libtbx import easy_run
 import iotbx.pdb
 
 def run():
-    """This runner script is used to carry out a large set of SE refinements using different strategies."""
+    """This runner script is used to carry out a large set of refinements using different strategies."""
 # print "Executing qRefine scripts: " datetime.now()
     total_start_time = time.time()
 
@@ -16,11 +16,10 @@ def run():
     print "Strategies selected are: "
 
     # This gives us the ability to direct the output PDBs of the script
-    results_prefix = "./results_b_rmsd_0.03_terachem_selectrmsd_max32/"#"../p26/04_results/" 
-    perturbed_prefix="./perturbed/"#"../p26/03_perturbed/"
-    mtz_prefix="./"#"../p26/02_mtz/"
-    #p26_pdb_prefix="../p26/01c_fixOXT/"
-    #
+    results_prefix = "./results_b_rmsd_0.03_terachem_selectrmsd_max32/"
+    perturbed_prefix="./perturbed/"
+    mtz_prefix="./"
+   
     folder_name=results_prefix
     make_folder(folder_name)
 
@@ -31,26 +30,21 @@ def run():
       if(strategy_name=="refine_cctbx"  ):  
         print strategy
         strategy_start_time = time.time()
-#folder_name="../p26/04_results/"+strategy_name
 	folder_name=results_prefix+strategy_name
         make_folder(folder_name)
 	file_out_prefix = [results_prefix]
-#	file_out_prefix = ["../p26/04_results"]
 	file_out_prefix.append(strategy_name)
         #Loop over data files
         data_files = os.listdir(mtz_prefix)
         for data_file in data_files:
             data_file_start_time = time.time()
             if(data_file.endswith(".mtz")):
-                data_file_name = "."#data_file[:-4] # drop the .mtz extension
-                #p26_pdb_file = p26_pdb_prefix+data_file_name+".pdb" 
-                #p26_pdb_xray = iotbx.pdb.input(file_name = p26_pdb_file).xray_structure_simple()
+                data_file_name = "." # drop the .mtz extension  
 		folder_name=results_prefix+strategy_name+"/"+data_file_name
 		make_folder(folder_name)	      
                 file_out_prefix.append(data_file_name)
 		pertubations = os.listdir(perturbed_prefix+data_file_name+"/")
 		for pertubation in pertubations:
-             #    if(pertubation=="0.3"):
 		  if(os.path.isdir(perturbed_prefix+"/"+data_file_name+"/"+pertubation)):
 		    file_out_prefix.append(pertubation)
                     make_folder(results_prefix+strategy_name+"/"+data_file_name+"/"+pertubation)
@@ -60,9 +54,7 @@ def run():
                     for snapshot in snapshots:
                         if(snapshot.endswith("pdb")):
                            snapshot_file_name = snapshot[:-4]
-#   assert snapshot_file_name == data_file_name # make sure these two files correspond
                            file_out_prefix.append(snapshot_file_name)
-#output = "/".join(file_out_prefix)
 	                   output=results_prefix+strategy_name+"/"+data_file_name+"/"+pertubation+"/"+snapshot_file_name
 			   result_pdb=output+".pdb"
 			   result_pdb_exists=os.path.exists(result_pdb) 
@@ -70,11 +62,7 @@ def run():
 			   #Execute job
                              cmd =  " ".join(["phenix.python ./qr-core/qrefine.py ",snapshotdir_name+snapshot, mtz_prefix+data_file, strategy, "update_all_scales=False"," file_out_prefix="+output, "  >  ", output+ ".log" ])
 			     print cmd
-                             easy_run.call(cmd)
-                           #result_pdb_xray = iotbx.pdb.input(file_name = result_pdb).xray_structure_simple()
-                           #rmsd_p26_result = p26_pdb_xray.sites_cart().rms_difference(result_pdb_xray.sites_cart())
-                           #print result_pdb, "    rmsd to p26:  " ,rmsd_p26_result  
-                           
+                             easy_run.call(cmd)                           
                 # for logging timings, if needed.
                 if(0):
                     data_file_time = time.time() - data_file_start_time
