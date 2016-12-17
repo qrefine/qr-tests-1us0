@@ -26,3 +26,12 @@
   python ../qr-core/qrefine.py a87_99_h.pdb.mtz perturbed/1.5/4.pdb restraints=cctbx update_all_scales=False
   
 4) run_analyze.py is to analyze the results.
+
+example analyze.dat 
+
+| Pert. Dose        |Min dist.          |  Max dist  | Av. dist.         |  % recovered |
+| ------------- |:-------------:| -----:|:-------------:| -----:|
+| 0.3       | 1.880 | 2.734 |2.239   |   45.56 
+ 
+
+
