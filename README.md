@@ -12,6 +12,7 @@
 1) Compute simulated diffraction data:
   
   phenix.fmodel a87_99_h.pdb add_random_error_to_amplitudes_percent=5 type=real high_res=4 low_res=6 r_free=0.1
+  
   mv a87_99_h.pdb.mtz data.mtz
   
   Given that we introduce 5% error into Fobs, we expect the best possible
