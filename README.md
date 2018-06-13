@@ -33,5 +33,6 @@ example analyze.dat
 | ------------- |:-------------:| -----:|:-------------:| -----:|
 | 0.3       | 1.880 | 2.734 |2.239   |   45.56 
  
+5) 2mFo-DFc calculated map, comamnd:
 
-
+phenix.maps data.mtz a87_99_h.pdb
